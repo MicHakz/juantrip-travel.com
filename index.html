@@ -1,0 +1,59 @@
+<DOCTYPE! html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <link rel="icon" href="logo.png">
+      <meta name="viewport" content="widt=device-width, initial-scale=1.0">
+      <title>JuanTrip Travel PH</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="">
+   </head>
+   <body>
+    
+   <header>
+     <img src="logo.png" class="logo">
+     <div class="navigation">
+      <div class="navigation-items">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Explore</a>
+      <a href="#">Gallery</a>
+      <a href="#">Contact</a>
+      </div>
+     </div>
+   </header>
+    <section class="home">
+      <img class="video-slide" src="nature.jpg">
+      <div class="content">   
+         <h1>JuanTrip<br><span>Travel PH.</span></h1>
+         <p>Discover excellence in travel with JuanTrip Travel PH . We offers a variety of travel experiences, such as adventurous trips, family vacations, business trips, and romantic getaways.</p>
+         <a href="#">Read More</a>
+         <div class="slider-navigation">
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+            <div class="nav-btn"></div>
+         </div>
+      </div>
+    </section>
+
+    <script>
+      //Javascript for video navigation
+      const btns = document.querySelectorAll(".nav-btn");
+
+      var sliderNav = function(manual){
+        btns.forEach((btn) => {
+         btn.classList.remove(active);
+      });
+
+         btns[manual].classList.add("active");
+      }
+
+      btns.forEach((btn, i) => {
+         btn.addEventListener("click",() => {
+            sliderNav(i);
+            });
+         });
+   </script>
+   </body>
+</html>
